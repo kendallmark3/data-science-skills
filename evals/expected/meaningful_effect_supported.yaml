@@ -1,0 +1,23 @@
+scenario: meaningful_effect_supported
+required_findings:
+- category: primary_effect
+  any_of:
+  - statistically significant
+- category: practical_significance
+  any_of:
+  - clears the practical threshold
+- category: guardrail
+  any_of:
+  - held
+forbidden_findings:
+- category:
+  - srm
+  - guardrail
+  severity:
+  - high
+  - critical
+  why: nothing was broken
+expected_visuals:
+- treatment_control_effect
+acceptable_decisions:
+- SUPPORTED

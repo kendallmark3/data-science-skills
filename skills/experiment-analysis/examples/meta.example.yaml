@@ -1,0 +1,25 @@
+name: Retention offer
+hypothesis: Offering one free month to at-risk customers increases renewal.
+format: units                  # units (one row per user) | aggregate (date, variant, users, conversions)
+primary_metric: converted
+metric_type: binary
+unit: user
+assignment: user-level hash randomization
+expected_split: {control: 0.5, treatment: 0.5}
+practical_threshold:
+  absolute: 0.01               # +1pp; or `relative: 0.05` for +5% of control
+  rationale: +1pp renewal covers the offer cost
+guardrails:
+  - {metric: page_load_ms, direction: lower_is_better, max_relative_degradation: 0.05}
+  - {metric: refunded, direction: lower_is_better, max_absolute_degradation: 0.01}
+segment_columns: [device]
+time_column: assigned_date
+planned_duration_days: 14
+stopping_rule: fixed horizon, 14 days
+alpha: 0.05
+
+# --- Aggregate input instead (one row per date x variant) ---
+# format: aggregate
+# primary_metric: conversions     # column holding successes
+# count_column: users             # column holding units exposed (default: users)
+# time_column: date

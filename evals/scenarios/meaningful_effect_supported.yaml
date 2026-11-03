@@ -1,0 +1,6 @@
+scenario: meaningful_effect_supported
+skill: experiment
+intent: Should we roll out the retention offer?
+inputs:
+  data: fixtures/experiments/retention_offer_units.csv
+  meta: fixtures/experiments/retention_offer.meta.yaml

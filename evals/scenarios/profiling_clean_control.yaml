@@ -1,0 +1,6 @@
+scenario: profiling_clean_control
+skill: profile
+intent: Is customers_clean.csv fit for a churn model?
+inputs:
+  data: fixtures/datasets/customers_clean.csv
+  context: fixtures/datasets/customers_clean.context.yaml

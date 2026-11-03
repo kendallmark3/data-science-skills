@@ -1,0 +1,46 @@
+scenario: profiling_seeded_defects
+required_findings:
+- category: missingness
+  any_of:
+  - email
+- category: duplicates
+  any_of:
+  - exact duplicate
+  - not unique
+- category: contamination
+  any_of:
+  - both splits
+  - train/test
+- category: range_violation
+  any_of:
+  - impossible
+  - out-of-range
+- category: date_anomaly
+  any_of:
+  - malformed
+- category: category_anomaly
+  any_of:
+  - premuim
+  - typo
+- category: constant
+  any_of:
+  - account_currency
+- category: leakage
+  any_of:
+  - days_since_cancellation
+  kind: inference
+forbidden_findings:
+- severity:
+  - critical
+  not_category:
+  - leakage
+  - contamination
+  why: critical findings must be limited to seeded leakage/contamination
+required_evidence:
+- source: customers.csv
+  location_contains: email
+expected_visuals:
+- missingness_chart
+- quality_scorecard
+acceptable_decisions:
+- NOT_FIT_AS_IS

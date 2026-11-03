@@ -1,0 +1,6 @@
+scenario: llm_pilot_with_conditions
+skill: evaluate
+intent: Is the assistant ready for a human-approved pilot?
+inputs:
+  data: fixtures/evaluations/support_assistant_llm_eval.csv
+  claim: fixtures/evaluations/support_assistant_pilot.claim.yaml

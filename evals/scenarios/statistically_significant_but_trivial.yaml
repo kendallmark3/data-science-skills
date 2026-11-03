@@ -1,0 +1,6 @@
+scenario: statistically_significant_but_trivial
+skill: experiment
+intent: Should we ship the green checkout button?
+inputs:
+  data: fixtures/experiments/checkout_button_daily.csv
+  meta: fixtures/experiments/checkout_button.meta.yaml

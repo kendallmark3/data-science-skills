@@ -1,0 +1,6 @@
+scenario: underpowered_inconclusive
+skill: experiment
+intent: Did the onboarding email raise activation?
+inputs:
+  data: fixtures/experiments/onboarding_email_units.csv
+  meta: fixtures/experiments/onboarding_email.meta.yaml

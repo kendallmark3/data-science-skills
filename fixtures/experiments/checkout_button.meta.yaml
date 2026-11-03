@@ -1,0 +1,16 @@
+name: Checkout button color
+hypothesis: A green checkout button increases checkout conversion.
+format: aggregate
+primary_metric: conversions
+metric_type: binary
+unit: user
+expected_split:
+  control: 0.5
+  treatment: 0.5
+practical_threshold:
+  absolute: 0.01
+  rationale: Below +1pp the redesign does not repay migration cost
+alpha: 0.05
+planned_duration_days: 21
+stopping_rule: fixed horizon, 21 days
+assignment: user-level hash randomization

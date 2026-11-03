@@ -1,0 +1,6 @@
+intended_use: Train and evaluate a churn model
+target: churned
+id_columns:
+- customer_id
+time_column: signup_date
+split_column: split

@@ -1,0 +1,13 @@
+# Every field is optional. Each one you add unlocks more checks.
+intended_use: Train and evaluate a churn model that drives retention outreach
+target: churned               # leakage + class balance
+id_columns: [customer_id]     # entity duplicates
+split_column: split           # train/test contamination
+time_column: signup_date      # malformed / future dates, freshness
+as_of: 2026-10-31             # reference date for freshness (default: today)
+required_columns: [email]     # missingness in these is more severe
+schema:
+  age: {type: integer, min: 16, max: 110}
+  monthly_spend: {type: float, min: 0}
+  plan: {type: category, allowed: [basic, standard, premium]}
+  signup_date: {type: date}

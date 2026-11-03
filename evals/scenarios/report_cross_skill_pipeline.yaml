@@ -1,0 +1,8 @@
+scenario: report_cross_skill_pipeline
+skill: report
+intent: Should we launch model-targeted retention offers?
+inputs:
+  runs:
+  - profiling_seeded_defects
+  - meaningful_effect_supported
+  - segment_failure_hidden_by_aggregate

@@ -1,0 +1,4 @@
+scenario: statistically_significant_but_trivial
+why: >
+  A typical overclaiming readout. It treats p < 0.001 as a win, recommends rollout,
+  and states a revenue impact with no evidence behind it. The grader must reject it.

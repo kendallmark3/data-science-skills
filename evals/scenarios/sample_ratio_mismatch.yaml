@@ -1,0 +1,6 @@
+scenario: sample_ratio_mismatch
+skill: experiment
+intent: Did the pricing page redesign win?
+inputs:
+  data: fixtures/experiments/pricing_page_units.csv
+  meta: fixtures/experiments/pricing_page.meta.yaml

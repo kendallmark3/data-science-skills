@@ -1,0 +1,5 @@
+scenario: profiling_unreadable_stop
+required_findings: []
+acceptable_decisions:
+- INSUFFICIENT_EVIDENCE
+expected_status: STOPPED

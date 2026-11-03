@@ -1,0 +1,6 @@
+scenario: contradictory_metrics
+skill: experiment
+intent: Should we lower the free-shipping threshold?
+inputs:
+  data: fixtures/experiments/free_shipping_units.csv
+  meta: fixtures/experiments/free_shipping.meta.yaml

@@ -1,0 +1,12 @@
+scenario: profiling_clean_control
+required_findings: []
+forbidden_findings:
+- severity:
+  - critical
+  - high
+  - moderate
+  why: no defects were seeded; none may be invented
+expected_visuals: []
+forbidden_visuals_any: true
+acceptable_decisions:
+- FIT_FOR_USE

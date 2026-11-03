@@ -1,0 +1,19 @@
+scenario: report_cross_skill_pipeline
+required_findings:
+- category: leakage
+  any_of:
+  - days_since_cancellation
+- category: segment_failure
+  any_of:
+  - tenure_segment=new
+required_evidence:
+- source: customers.csv
+- source: retention_offer_units.csv
+- source: churn_model_predictions.csv
+expected_visuals:
+- segment_performance
+- treatment_control_effect
+- decision_summary
+acceptable_decisions:
+- REPORTED
+- REPORTED_WITH_EXCLUSIONS

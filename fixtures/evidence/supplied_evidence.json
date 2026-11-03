@@ -1,0 +1,38 @@
+[
+  {
+    "id": "X-E-001",
+    "source": "retention_offer_results.csv",
+    "location": "primary metric, both arms",
+    "observation": "Renewal 14.8% treatment vs 12.0% control (n=10,000 each); diff +2.8pp, 95% CI [1.8, 3.8]pp",
+    "method": "two-proportion Wald CI",
+    "confidence": "high",
+    "value": 0.028
+  },
+  {
+    "id": "X-E-002",
+    "source": "retention_offer_results.csv",
+    "location": "segment=tablet",
+    "observation": "Tablet users: +9pp lift, n=140 per arm, 95% CI [-1.5, 19.5]pp",
+    "method": "two-proportion Wald CI",
+    "confidence": "low",
+    "value": 0.09
+  },
+  {
+    "id": "X-E-003",
+    "source": "ops_dashboard_export.csv",
+    "location": "weekly support tickets, weeks 32-35",
+    "observation": "Support tickets per 1k customers fell from 41 to 37 after launch",
+    "method": "weekly count / active customers",
+    "confidence": "medium",
+    "value": -4
+  },
+  {
+    "id": "X-E-004",
+    "source": "cs_team_survey.md",
+    "location": "Q3 agent survey, item 4",
+    "observation": "7 of 9 agents report more offer-related tickets since launch",
+    "method": "agent self-report survey",
+    "confidence": "low",
+    "value": 7
+  }
+]

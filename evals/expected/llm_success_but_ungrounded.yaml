@@ -1,0 +1,17 @@
+scenario: llm_success_but_ungrounded
+required_findings:
+- category: requirement_failed
+  any_of:
+  - grounded
+- category: hidden_failure
+  any_of:
+  - not grounded
+- category: judge_validity
+  any_of:
+  - κ
+  - kappa
+  - human
+expected_visuals:
+- llm_success_vs_groundedness
+acceptable_decisions:
+- NOT_READY

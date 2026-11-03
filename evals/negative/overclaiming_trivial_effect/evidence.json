@@ -1,0 +1,2 @@
+[{"id": "EX-E-001", "source": "checkout_button_daily.csv", "location": "metric=conversions",
+  "observation": "diff +0.35pp, p < 0.001", "method": "z-test", "confidence": "high", "value": 0.0035}]

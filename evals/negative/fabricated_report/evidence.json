@@ -1,0 +1,4 @@
+[{"id": "X-E-001", "source": "retention_offer_results.csv", "location": "primary metric", "observation": "+2.8pp",
+  "method": "Wald CI", "confidence": "high"},
+ {"id": "X-E-002", "source": "retention_offer_results.csv", "location": "segment=tablet", "observation": "+9pp, n=140",
+  "method": "Wald CI", "confidence": "low"}]

@@ -1,0 +1,11 @@
+scenario: underpowered_inconclusive
+required_findings:
+- category: power
+  any_of:
+  - underpowered
+  - minimum detectable
+forbidden_findings:
+- recommendation_pattern: ^(roll out|ship|launch)
+  why: inconclusive
+acceptable_decisions:
+- INCONCLUSIVE

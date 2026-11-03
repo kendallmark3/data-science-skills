@@ -1,0 +1,5 @@
+scenario: profiling_unreadable_stop
+skill: profile
+intent: Profile a corrupt file
+inputs:
+  data: fixtures/datasets/unreadable.csv

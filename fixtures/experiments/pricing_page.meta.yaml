@@ -1,0 +1,22 @@
+name: Pricing page redesign
+hypothesis: The redesigned pricing page increases plan upgrades.
+format: units
+primary_metric: converted
+metric_type: binary
+unit: user
+expected_split:
+  control: 0.5
+  treatment: 0.5
+practical_threshold:
+  absolute: 0.01
+guardrails:
+- metric: page_load_ms
+  direction: lower_is_better
+  max_relative_degradation: 0.05
+segment_columns:
+- device
+time_column: assigned_date
+alpha: 0.05
+planned_duration_days: 14
+stopping_rule: fixed horizon, 14 days
+assignment: user-level hash randomization

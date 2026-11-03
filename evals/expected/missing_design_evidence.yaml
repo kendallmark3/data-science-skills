@@ -1,0 +1,13 @@
+scenario: missing_design_evidence
+required_findings:
+- category: design
+  any_of:
+  - incomplete
+  - missing
+forbidden_findings:
+- category:
+  - primary_effect
+  why: no metric was declared, so no effect may be reported
+acceptable_decisions:
+- INVALID_EXPERIMENT
+- INCONCLUSIVE

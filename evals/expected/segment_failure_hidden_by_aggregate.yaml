@@ -1,0 +1,16 @@
+scenario: segment_failure_hidden_by_aggregate
+required_findings:
+- category: segment_failure
+  any_of:
+  - tenure_segment=new
+- category: coverage
+  any_of:
+  - under-represents
+required_evidence:
+- source: churn_model_predictions.csv
+  location_contains: tenure_segment=new
+expected_visuals:
+- segment_performance
+acceptable_decisions:
+- NOT_READY
+- READY_WITH_CONDITIONS

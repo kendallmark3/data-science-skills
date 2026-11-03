@@ -1,0 +1,6 @@
+scenario: llm_success_but_ungrounded
+skill: evaluate
+intent: Can the support assistant answer customers unsupervised?
+inputs:
+  data: fixtures/evaluations/support_assistant_llm_eval.csv
+  claim: fixtures/evaluations/support_assistant.claim.yaml

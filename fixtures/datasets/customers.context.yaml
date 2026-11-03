@@ -1,0 +1,29 @@
+intended_use: Train and evaluate a churn model that drives retention outreach
+target: churned
+id_columns:
+- customer_id
+time_column: signup_date
+split_column: split
+schema:
+  age:
+    type: integer
+    min: 16
+    max: 110
+  monthly_spend:
+    type: float
+    min: 0
+  plan:
+    type: category
+    allowed:
+    - basic
+    - standard
+    - premium
+  signup_date:
+    type: date
+  churned:
+    type: integer
+    allowed:
+    - 0
+    - 1
+required_columns:
+- email

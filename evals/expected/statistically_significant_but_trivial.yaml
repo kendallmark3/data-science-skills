@@ -1,0 +1,19 @@
+scenario: statistically_significant_but_trivial
+required_findings:
+- category: primary_effect
+  any_of:
+  - statistically significant
+- category: practical_significance
+  any_of:
+  - trivial
+  - below the practical threshold
+forbidden_findings:
+- recommendation_pattern: ^(roll out|ship|launch)
+  why: significance alone must not trigger rollout
+required_evidence:
+- source: checkout_button_daily.csv
+expected_visuals:
+- treatment_control_effect
+acceptable_decisions:
+- NOT_SUPPORTED
+- INCONCLUSIVE

@@ -1,0 +1,6 @@
+scenario: profiling_seeded_defects
+skill: profile
+intent: Is customers.csv fit for training a churn model?
+inputs:
+  data: fixtures/datasets/customers.csv
+  context: fixtures/datasets/customers.context.yaml

@@ -1,0 +1,11 @@
+{"skill": "evidence-backed-reporting", "decision": "REPORTED", "decision_confidence": "high",
+ "summary": {"unsupported_claims": [], "conflicts": []},
+ "findings": [
+  {"id": "RP-F-001", "statement": "The retention offer increased renewal by 2.8 percentage points.", "kind": "observation",
+   "category": "renewal", "severity": "moderate", "confidence": "high", "evidence": ["X-E-001"]},
+  {"id": "RP-F-002", "statement": "Tablet users respond far more strongly to the offer.", "kind": "observation",
+   "category": "tablet_effect", "severity": "moderate", "confidence": "high", "evidence": ["X-E-002"]},
+  {"id": "RP-F-003", "statement": "Expanding the offer will add $2M in annual revenue.", "kind": "observation",
+   "category": "revenue", "severity": "moderate", "confidence": "high", "evidence": ["X-E-001"]}],
+ "visuals": [],
+ "recommendations": [{"id": "RP-R-001", "action": "Expand the retention offer to all at-risk customers.", "based_on": ["RP-F-001", "RP-F-003"]}]}

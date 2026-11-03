@@ -1,0 +1,17 @@
+scenario: sample_ratio_mismatch
+required_findings:
+- category: srm
+  any_of:
+  - sample ratio mismatch
+forbidden_findings:
+- recommendation_pattern: ^(roll out|ship|launch)
+  why: an invalid experiment cannot justify rollout
+- category:
+  - practical_significance
+  why: effect size must not be interpreted under SRM
+expected_visuals:
+- sample_ratio_mismatch
+forbidden_visuals:
+- treatment_control_effect
+acceptable_decisions:
+- INVALID_EXPERIMENT

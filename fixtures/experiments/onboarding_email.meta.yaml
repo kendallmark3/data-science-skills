@@ -1,0 +1,16 @@
+name: Onboarding email
+hypothesis: A day-2 onboarding email increases activation.
+format: units
+primary_metric: converted
+metric_type: binary
+unit: user
+expected_split:
+  control: 0.5
+  treatment: 0.5
+practical_threshold:
+  absolute: 0.02
+alpha: 0.05
+planned_duration_days: 10
+stopping_rule: fixed horizon, 10 days
+assignment: user-level hash randomization
+time_column: assigned_date

@@ -1,0 +1,4 @@
+scenario: report_mixed_evidence
+why: >
+  A report that adopts the unsupported $2M claim as a finding, keeps weak tablet evidence at
+  high confidence, hides the ticket-volume conflict, and recommends full expansion.

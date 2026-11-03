@@ -1,0 +1,64 @@
+intent: Decide whether to expand the retention offer to all at-risk customers.
+evidence_files:
+- supplied_evidence.json
+claims:
+- id: C-1
+  claim: The retention offer increased renewal by 2.8 percentage points.
+  evidence:
+  - X-E-001
+  confidence: high
+  topic: renewal
+  direction: up
+- id: C-2
+  claim: Tablet users respond far more strongly to the offer than other users.
+  evidence:
+  - X-E-002
+  confidence: high
+  topic: tablet_effect
+  direction: up
+- id: C-3
+  claim: Support ticket volume decreased after launch.
+  evidence:
+  - X-E-003
+  confidence: medium
+  topic: support_tickets
+  direction: down
+- id: C-4
+  claim: Support ticket volume increased after launch.
+  evidence:
+  - X-E-004
+  confidence: medium
+  topic: support_tickets
+  direction: up
+- id: C-5
+  claim: Expanding the offer will add $2M in annual revenue.
+  evidence: []
+  confidence: high
+  topic: revenue
+  direction: up
+- id: C-6
+  claim: Churned customers who received the offer were 3x more likely to return.
+  evidence:
+  - X-E-099
+  confidence: high
+  topic: winback
+  direction: up
+visuals:
+- id: XV-1
+  path: visuals/renewal_by_arm.png
+  evidence:
+  - X-E-001
+  purpose: Renewal rate by experiment arm
+- id: XV-2
+  path: visuals/revenue_projection.png
+  evidence:
+  - X-E-077
+  purpose: Projected revenue from expansion
+recommendations:
+- action: Expand the retention offer to all at-risk customers.
+  based_on:
+  - C-1
+  - C-5
+- action: Run a powered follow-up test for tablet users before targeting them.
+  based_on:
+  - C-2

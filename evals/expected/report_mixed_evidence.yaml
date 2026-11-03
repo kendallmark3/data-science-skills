@@ -1,0 +1,22 @@
+scenario: report_mixed_evidence
+required_findings:
+- any_of:
+  - renewal by 2.8
+  confidence: high
+- any_of:
+  - tablet
+  confidence: low
+forbidden_findings:
+- any_of:
+  - $2M
+  - 3x more likely
+  why: unsupported assertions must not become findings
+- recommendation_pattern: expand the retention offer to all
+  why: rests on unsupported claim C-5
+required_unsupported:
+- C-5
+- C-6
+required_conflicts:
+- support_tickets
+acceptable_decisions:
+- REPORTED_WITH_EXCLUSIONS

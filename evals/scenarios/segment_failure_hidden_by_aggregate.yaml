@@ -1,0 +1,6 @@
+scenario: segment_failure_hidden_by_aggregate
+skill: evaluate
+intent: Is the churn model ready for all customers?
+inputs:
+  data: fixtures/evaluations/churn_model_predictions.csv
+  claim: fixtures/evaluations/churn_model.claim.yaml

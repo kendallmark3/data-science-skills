@@ -1,0 +1,8 @@
+{"skill": "experiment-analysis", "decision": "SUPPORTED", "decision_confidence": "high",
+ "findings": [
+  {"id": "EX-F-001", "statement": "The green button is a statistically significant win (p < 0.001).", "kind": "observation",
+   "category": "primary_effect", "severity": "info", "confidence": "high", "evidence": ["EX-E-001"]},
+  {"id": "EX-F-002", "statement": "Rolling out will add $1.2M in annual revenue.", "kind": "observation",
+   "category": "business_impact", "severity": "info", "confidence": "high", "evidence": ["EX-E-042"]}],
+ "visuals": [],
+ "recommendations": [{"id": "EX-R-001", "action": "Roll out the green button to 100% of users.", "based_on": ["EX-F-001", "EX-F-002"]}]}

@@ -1,0 +1,14 @@
+scenario: contradictory_metrics
+required_findings:
+- category: guardrail
+  any_of:
+  - beyond its tolerance
+  - degraded
+forbidden_findings:
+- recommendation_pattern: ^(roll out|ship|launch)
+  why: guardrail broke
+expected_visuals:
+- treatment_control_effect
+acceptable_decisions:
+- INCONCLUSIVE
+- NOT_SUPPORTED

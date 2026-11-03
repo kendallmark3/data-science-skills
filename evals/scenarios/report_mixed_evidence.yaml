@@ -1,0 +1,5 @@
+scenario: report_mixed_evidence
+skill: report
+intent: Decide whether to expand the retention offer.
+inputs:
+  claims: fixtures/evidence/review_claims.yaml

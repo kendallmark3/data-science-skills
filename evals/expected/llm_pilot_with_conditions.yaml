@@ -1,0 +1,10 @@
+scenario: llm_pilot_with_conditions
+required_findings:
+- category: segment_failure
+  any_of:
+  - policy
+acceptable_decisions:
+- READY_WITH_CONDITIONS
+- NOT_READY
+forbidden_decisions:
+- READY

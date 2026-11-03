@@ -1,0 +1,6 @@
+scenario: missing_design_evidence
+skill: experiment
+intent: Did the homepage hero test win?
+inputs:
+  data: fixtures/experiments/onboarding_email_units.csv
+  meta: fixtures/experiments/no_design.meta.yaml
